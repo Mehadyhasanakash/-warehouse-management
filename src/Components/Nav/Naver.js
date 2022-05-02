@@ -11,6 +11,7 @@ const Naver = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link className='text-light' as={Link} to="/home">Home</Nav.Link>
+              <Nav.Link className='text-light' as={Link} to="/about">About</Nav.Link>
               
               
             </Nav>

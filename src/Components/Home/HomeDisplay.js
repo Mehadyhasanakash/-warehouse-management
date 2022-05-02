@@ -2,9 +2,9 @@ import React from 'react';
 
 const HomeDisplay = () => {
     return (
-        <div class="container ">
-            <div class="row  d-flex align-items-center m-5 ">
-                <div class="col">
+        <div className="container ">
+            <div className="row  d-flex justify-contain-center align-items-center m-5 ">
+                <div className="col">
                     <div >
 
                         <h1 className='text-uppercase text-success'>Book Warehouse Management</h1> <br />
@@ -15,9 +15,9 @@ const HomeDisplay = () => {
                             <span className='text-danger'>Here they are in no particular order.</span></p>
                         <br />
 
-                        <button type="button" class="btn btn-success">Oder-NOw</button>
+                        <button type="button" className="btn btn-success">Oder-NOw</button>
 
-
+                            
 
 
                     </div>
@@ -26,9 +26,9 @@ const HomeDisplay = () => {
 
 
 
-                <div class="col">
+                <div className="col">
                     <div>
-                        <img className='img-fluid text-end' src="https://i.ibb.co/3RHp28W/image07.png" alt="" />
+                        <img className='img-fluid' src="https://i.ibb.co/3RHp28W/image07.png" alt="" />
                     </div>
                 </div>
             </div>
