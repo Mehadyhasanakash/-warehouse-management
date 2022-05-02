@@ -5,6 +5,7 @@ import Naver from './Components/Nav/Naver';
 import './App.css'
 import Blog from './Components/Blog/Blog';
 import Login from './Components/Login/Login';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Route path='/blog' element={<Blog></Blog>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
     </Routes>
+
+    <Footer></Footer>
 
 
 

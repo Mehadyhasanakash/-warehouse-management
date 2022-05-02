@@ -6,7 +6,13 @@ const InventoryDisplay = (props) => {
     const {name, price, img, quantity, description} = props.book
 
     useEffect(() =>{
-      AOS.init()
+      AOS.init(
+        {
+          offset: 100,
+          duration: 2000,
+          easing: 'ease'
+      }
+      )
     })
     return (
         <div className="col">
