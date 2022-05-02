@@ -13,10 +13,10 @@ const ExtraSection = () => {
     })
 
     return (
-        <div className="container ">
-            <div className="row gx-5 m-5 d-flex align-items-center">
+        <div className="container-sm ">
+            <div className="row gx-5 m-5 align-items-center">
                 <div className="col" data-aos="flip-left">
-                    <div><img src="https://i.ibb.co/8mJFfVB/image08.png" alt="" /></div>
+                    <img className='img-fluid' src="https://i.ibb.co/8mJFfVB/image08.png" alt="" />
                 </div>
                 <div className="col" data-aos="flip-right">
                     <div>

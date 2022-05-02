@@ -7,7 +7,7 @@ const Footer = () => {
     const year = today.getFullYear()
     return (
         <div className='bg-success hight'>
-            <div class="container ">
+            <div class="container-sm ">
   <div class="row  mt-5 ">
     <div class="col text-center">
      <h1 className='text-light p-5 mt-3'>Copy right @{year}</h1>

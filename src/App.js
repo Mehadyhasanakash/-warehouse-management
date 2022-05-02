@@ -5,7 +5,6 @@ import Naver from './Components/Nav/Naver';
 import './App.css'
 import Blog from './Components/Blog/Blog';
 import Login from './Components/Login/Login';
-import Footer from './Components/Footer/Footer';
 import InventoryDetail from './Components/Home/InventoryDetail/InventoryDetail';
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
       <Route path='inventory/:inventoryId' element={<InventoryDetail></InventoryDetail>}></Route>
     </Routes>
 
-    <Footer></Footer>
+    
 
 
 
