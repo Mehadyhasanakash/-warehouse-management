@@ -1,9 +1,15 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useNavigate } from 'react-router-dom';
 
 const InventoryDisplay = (props) => {
-    const {name, price, img, quantity, description} = props.book
+    const {_id, name, price, img, quantity, description} = props.book
+    const navigate = useNavigate()
+
+    const navigateToBookUpdate = id =>{
+      navigate ( `/inventory/${id}`)
+    }
 
     useEffect(() =>{
       AOS.init(
@@ -28,7 +34,7 @@ const InventoryDisplay = (props) => {
 
       </div>
       <div>
-      <button type="button" class="btn btn-success w-100 ">ORDER_NOW</button>
+      <button onClick={()=> navigateToBookUpdate(_id)} type="button" class="btn btn-success w-100 ">UPDATE-BUTTON</button>
       </div>
     </div>
     

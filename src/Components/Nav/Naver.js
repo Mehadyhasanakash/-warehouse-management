@@ -14,8 +14,9 @@ const Naver = () => {
               <Nav.Link className='text-light' as={Link} to="/about">About</Nav.Link>
               <Nav.Link className='text-light' as={Link} to="/blog">Blog</Nav.Link>
               <Nav.Link className='text-light' as={Link} to="/login">Login</Nav.Link>
+              {/* <Nav.Link className='text-light' as={Link} to="/inventory">Inventory</Nav.Link> */}
               
-              
+            
             </Nav>
           </Navbar.Collapse>
         </Container>
