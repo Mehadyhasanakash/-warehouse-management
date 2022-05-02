@@ -12,6 +12,8 @@ const Naver = () => {
             <Nav className="me-auto">
               <Nav.Link className='text-light' as={Link} to="/home">Home</Nav.Link>
               <Nav.Link className='text-light' as={Link} to="/about">About</Nav.Link>
+              <Nav.Link className='text-light' as={Link} to="/blog">Blog</Nav.Link>
+              <Nav.Link className='text-light' as={Link} to="/login">Login</Nav.Link>
               
               
             </Nav>

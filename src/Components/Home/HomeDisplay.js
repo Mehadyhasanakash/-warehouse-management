@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeDisplay = () => {
     return (
-        <div className="container ">
+        <div className="container h-100 ">
             <div className="row  d-flex justify-contain-center align-items-center m-5 ">
                 <div className="col">
                     <div >
