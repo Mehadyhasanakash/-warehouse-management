@@ -6,7 +6,6 @@ import './App.css'
 import Blog from './Components/Blog/Blog';
 import Login from './Components/Login/Login';
 import Footer from './Components/Footer/Footer';
-import Inventory from './Components/Home/Inventory';
 import InventoryDetail from './Components/Home/InventoryDetail/InventoryDetail';
 
 function App() {
