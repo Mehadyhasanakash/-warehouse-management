@@ -6,6 +6,7 @@ import './App.css'
 import Blog from './Components/Blog/Blog';
 import Login from './Components/Login/Login';
 import InventoryDetail from './Components/Home/InventoryDetail/InventoryDetail';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -18,7 +19,11 @@ function App() {
       <Route path='/home' element={<Home></Home>}></Route>
       <Route path='/blog' element={<Blog></Blog>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
-      <Route path='inventory/:inventoryId' element={<InventoryDetail></InventoryDetail>}></Route>
+      <Route path='inventory/:inventoryId' element={
+        <PrivateRoute>
+          <InventoryDetail></InventoryDetail>
+        </PrivateRoute>
+      }></Route>
     </Routes>
 
     

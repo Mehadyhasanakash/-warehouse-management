@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Helmat from '../../Helmat/Helmat';
 import './InventoryDetail.css'
 
 const InventoryDetail = () => {
@@ -15,6 +16,7 @@ const InventoryDetail = () => {
     } ,[])
     return (
         <div className='w-50 mx-auto'>
+          <Helmat title='inventory-item'></Helmat>
             <h1 className='text-center'>Welcome to Inventory item..........</h1>
 
             <div className="card top-img">
