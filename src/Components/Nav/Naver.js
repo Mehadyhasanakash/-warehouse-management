@@ -22,15 +22,27 @@ const Naver = () => {
               <Nav.Link className='text-light' as={Link} to="/blog">Blog</Nav.Link>
               <Nav.Link className='text-light' as={Link} to="/login">Login</Nav.Link>
               {/* <Nav.Link className='text-light' as={Link} to="/inventory">Inventory</Nav.Link> */}
+              {
+              user? <Nav.Link className='text-light' as={Link} to="/manageInventories">ManageInventories</Nav.Link> : ''
+            }
+              
+           
               
             
             </Nav>
           </Navbar.Collapse>
+        
           <Nav className="me-auto">
+            
 
                 {
-                  user ?  <Nav.Link className='text-light'> {user.displayName}
+                  user ?  
+                  
+                                    
+                  <Nav.Link className='text-light'> {user.displayName}
                   <button onClick={()=> signOut(auth)} type="button" className="btn btn-danger">SignOUt</button>
+
+                  
                   
                    </Nav.Link> : <Nav.Link className='text-light'>user</Nav.Link>
                 }
