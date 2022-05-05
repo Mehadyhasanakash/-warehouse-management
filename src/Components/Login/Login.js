@@ -1,14 +1,24 @@
-import { Button } from 'react-bootstrap';
+import { Button, Nav } from 'react-bootstrap';
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import './Login.css'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../Firebase/FirebaseHook';
 import GoogleSignin from '../GoogleSignin/GoogleSignin';
+import Helmat from '../Helmat/Helmat';
+import { Link, useNavigate } from 'react-router-dom';
 
   
 const Login = () => {
-  const [signInWithEmailAndPassword,user,loading,error,] = useSignInWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword, user] = useSignInWithEmailAndPassword(auth);
+
+  const navigate = useNavigate()
+
+
+
+  if(user){
+    navigate ('inventory/:inventoryId')
+  }
 
   
 
@@ -26,6 +36,7 @@ const Login = () => {
 
     return (
       <div className=' hight'>
+        <Helmat title='login'></Helmat>
             <Form onSubmit={hendalSubmit} className='w-50 mx-auto' >
                 <h1 className='text-center text-success'>Login form</h1>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -46,6 +57,8 @@ const Login = () => {
         <Button variant="primary" type="submit">
           Submit
         </Button> <br /> <br />
+
+        <Nav.Link as={Link} to="/register"><h3 className='text-danger'>please click on  Register page!!!</h3></Nav.Link>
 
         
       </Form>

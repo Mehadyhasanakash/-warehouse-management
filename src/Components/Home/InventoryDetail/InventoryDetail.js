@@ -16,7 +16,7 @@ const InventoryDetail = () => {
     } ,[])
     return (
         <div className='w-50 mx-auto'>
-          <Helmat title='inventory-item'></Helmat>
+          <Helmat title='inventory-item '></Helmat>
             <h1 className='text-center'>Welcome to Inventory item..........</h1>
 
             <div className="card top-img">

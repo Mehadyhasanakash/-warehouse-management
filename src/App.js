@@ -7,6 +7,7 @@ import Blog from './Components/Blog/Blog';
 import Login from './Components/Login/Login';
 import InventoryDetail from './Components/Home/InventoryDetail/InventoryDetail';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Registration from './Components/Registration/Registration';
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
       <Route path='/' element={<Home></Home>}></Route>
       <Route path='/home' element={<Home></Home>}></Route>
       <Route path='/blog' element={<Blog></Blog>}></Route>
+      <Route path='/registration' element={<Registration/>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
-      <Route path='inventory/:inventoryId' element={
+      <Route path='/inventory/:inventoryId' element={
         <PrivateRoute>
           <InventoryDetail></InventoryDetail>
         </PrivateRoute>

@@ -9,9 +9,10 @@ const GoogleSignin = () => {
     const [signInWithGoogle, user] = useSignInWithGoogle(auth);
     const navigate = useNavigate()
 
+
     if(user){
         
-        navigate('/inventory')
+    navigate(`/inventory/:inventoryId`)
     }
 
     return (
