@@ -8,6 +8,7 @@ import GoogleSignin from '../GoogleSignin/GoogleSignin';
 import Helmat from '../Helmat/Helmat';
 import { Link, useNavigate } from 'react-router-dom';
 
+
   
 const Login = () => {
   const [signInWithEmailAndPassword, user] = useSignInWithEmailAndPassword(auth);
@@ -58,7 +59,7 @@ const Login = () => {
           Submit
         </Button> <br /> <br />
 
-        <Nav.Link as={Link} to="/register"><h3 className='text-danger'>please click on  Register page!!!</h3></Nav.Link>
+        <Nav.Link as={Link} to="/registration"><h3 className='text-danger'>please click on  Register page!!!</h3></Nav.Link>
 
         
       </Form>

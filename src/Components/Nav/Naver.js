@@ -1,8 +1,15 @@
 import React from 'react';
 import { Container, Nav, Navbar,  } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../Firebase/FirebaseHook';
+import { signOut } from 'firebase/auth';
+
 import './Nav.css'
 const Naver = () => {
+  const [user] = useAuthState(auth);
+
+
     return (
         <Navbar bg="success" expand="lg">
         <Container>
@@ -19,6 +26,19 @@ const Naver = () => {
             
             </Nav>
           </Navbar.Collapse>
+          <Nav className="me-auto">
+
+                {
+                  user ?  <Nav.Link className='text-light'> {user.displayName}
+                  <button onClick={()=> signOut(auth)} type="button" className="btn btn-danger">SignOUt</button>
+                  
+                   </Nav.Link> : <Nav.Link className='text-light'>user</Nav.Link>
+                }
+             
+              {/* <Nav.Link className='text-light' as={Link} to="/inventory">Inventory</Nav.Link> */}
+              
+            
+            </Nav>
         </Container>
       </Navbar>
     );

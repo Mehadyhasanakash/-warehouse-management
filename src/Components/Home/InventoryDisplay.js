@@ -21,7 +21,7 @@ const InventoryDisplay = (props) => {
       )
     })
     return (
-        <div className="col">
+      <div className="col">
     <div className="card " data-aos="fade-up">
       <img width={50} src={img} className="card-img-top p-5" alt="..."/>
       <div className="card-body">
