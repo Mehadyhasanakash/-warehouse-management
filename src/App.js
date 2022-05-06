@@ -9,6 +9,7 @@ import InventoryDetail from './Components/Home/InventoryDetail/InventoryDetail';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Registration from './Components/Registration/Registration';
 import ManageInventories from './Components/Manage Inventories/ManageInventories';
+import AddNewItem from './Components/AddNewItem/AddNewItem';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path='/blog' element={<Blog></Blog>}></Route>
       <Route path='/registration' element={<Registration/>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
+      <Route path='/addNewItem' element={<AddNewItem/>}></Route>
       <Route path='/manageInventories' element={<ManageInventories></ManageInventories>}></Route>
       <Route path='/inventory/:inventoryId' element={
         <PrivateRoute>

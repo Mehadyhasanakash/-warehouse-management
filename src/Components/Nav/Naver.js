@@ -11,7 +11,7 @@ const Naver = () => {
 
 
     return (
-        <Navbar bg="success" expand="lg">
+        <Navbar sticky='top' bg="success" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/home"><img className='img'  src="https://i.ibb.co/8XRpCC8/logo01.png" alt="" /></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,6 +24,9 @@ const Naver = () => {
               {/* <Nav.Link className='text-light' as={Link} to="/inventory">Inventory</Nav.Link> */}
               {
               user? <Nav.Link className='text-light' as={Link} to="/manageInventories">ManageInventories</Nav.Link> : ''
+            }
+              {
+              user? <Nav.Link className='text-light' as={Link} to="/addNewItem">AddNewItem</Nav.Link> : ''
             }
               
            

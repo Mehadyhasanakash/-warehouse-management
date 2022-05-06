@@ -1,10 +1,20 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import auth from '../Firebase/FirebaseHook';
+import { useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 const MangageInventoryDisplay = (props) => {
+    const navigate = useNavigate()
     
+    const [user] = useAuthState(auth);
+
+    if(!user){
+        navigate('/home')
+    }
+
 
 
 

@@ -8,24 +8,32 @@ const ManageInventories = () => {
     const [books] = useBook()
 
     return (
-        <div className='container-sm' >
-            
-        <div className=' row row-cols-1 row-cols-md-3 g-4 m-5'>
         
-
-        {
-            books.map (book => <MangageInventoryDisplay
+       <div>
+           
+           
+            <div className='container-sm' >
             
-                key={book.id}
-                    book = {book}
             
-            >
-                    
-            </MangageInventoryDisplay>)
-        }
-
-    </div>
-    </div>
+            
+            <div className=' row row-cols-1 row-cols-md-3 g-4 mt-5'>
+            
+    
+            {
+                books.map (book => <MangageInventoryDisplay
+                
+                    key={book.id}
+                        book = {book}
+                
+                >
+                        
+                </MangageInventoryDisplay>)
+            }
+    
+        </div>
+        
+        </div>
+       </div>
     );
 };
 
