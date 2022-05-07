@@ -10,6 +10,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Registration from './Components/Registration/Registration';
 import ManageInventories from './Components/Manage Inventories/ManageInventories';
 import AddNewItem from './Components/AddNewItem/AddNewItem';
+import MyItem from './Components/MyItem/MyItem';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path='/registration' element={<Registration/>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
       <Route path='/addNewItem' element={<AddNewItem/>}></Route>
+      <Route path='/my-item' element={<MyItem/>}></Route>
       <Route path='/manageInventories' element={<ManageInventories></ManageInventories>}></Route>
       <Route path='/inventory/:inventoryId' element={
         <PrivateRoute>

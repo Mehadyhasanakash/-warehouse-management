@@ -28,6 +28,9 @@ const Naver = () => {
               {
               user? <Nav.Link className='text-light' as={Link} to="/addNewItem">AddNewItem</Nav.Link> : ''
             }
+              {
+              user? <Nav.Link className='text-light' as={Link} to="/my-item">MY_ITEM</Nav.Link> : ''
+            }
               
            
               
