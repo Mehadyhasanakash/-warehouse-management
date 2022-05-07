@@ -2,7 +2,6 @@ import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
-import Inventory from '../Home/Inventory';
 
 
 
@@ -16,7 +15,7 @@ const AddNewItem = () => {
 
     const onSubmitNewItem = async (e) => {
 
-        toast("AddNow")
+        toast("Add Successfully")
 
         e.preventDefault()
         const name = e.target.name.value;
@@ -64,23 +63,23 @@ const AddNewItem = () => {
         <form onSubmit={onSubmitNewItem} className='w-50 mx-auto mt-5 hight'>
             <div class="mb-3">
                 <label for="exampleInputName" class="form-label">Book Name</label>
-                <input type="Book-Name" name='name' class="form-control" id="exampleInputBookName" aria-describedby="bookNameHelp" />
+                <input type="Book-Name" name='name' class="form-control" id="exampleInputBookName" aria-describedby="bookNameHelp" required />
                 <div id="bookNameHelp" class="form-text">please input book-Name.</div>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPrice" class="form-label">Book price</label>
-                <input type="Book-Price" name='price' class="form-control" id="exampleInputBookPrice" aria-describedby="bookPriceHelp" />
+                <input type="Book-Price" name='price' class="form-control" id="exampleInputBookPrice" aria-describedby="bookPriceHelp" required />
                 <div id="bookPriceHelp" class="form-text">please input book-Price.</div>
             </div>
             <div class="mb-3">
                 <label for="exampleInputQuantity" class="form-label">Book Quantity</label>
-                <input type="Book-Quantity" name='quantity' class="form-control" id="exampleInputBookQuantity" aria-describedby="bookQuantityHelp" />
+                <input type="Book-Quantity" name='quantity' class="form-control" id="exampleInputBookQuantity" aria-describedby="bookQuantityHelp" required />
                 <div id="bookQuantityHelp" class="form-text">please input book-Quantity.</div>
             </div>
             <div class="mb-3">
                 <label for="exampleInputDescription" class="form-label">Book Description</label>
-                <input type="Book-Description" name='Description' class="form-control" id="exampleInputBookDescription" aria-describedby="bookDescriptionHelp" />
-                <div id="bookQuantityHelp" class="form-text">please input book-Quantity.</div>
+                <input type="Book-Description" name='Description' class="form-control" id="exampleInputBookDescription" aria-describedby="bookDescriptionHelp" required />
+                <div id="bookDescriptionHelp" class="form-text">please input book-Description.</div>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>

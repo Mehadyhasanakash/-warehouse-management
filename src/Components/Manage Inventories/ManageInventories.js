@@ -5,7 +5,39 @@ import MangageInventoryDisplay from './MangageInventoryDisplay';
 const ManageInventories = () => {
     
 
-    const [books] = useBook()
+    const [books,setBooks] = useBook()
+
+
+  const DeleteHendal = id => {
+
+    const proceed = window.confirm('are you sure')
+
+    if (proceed) {
+      const url = `http://localhost:5000/inventory/${id}`;
+      fetch(url, {
+        method: 'DELETE',
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.deletedCount > 0) {
+            const remaining = books.filter(book => book._id !== id);
+            setBooks(remaining)
+
+          }
+        })
+        
+
+
+    }
+
+
+
+
+  
+
+
+
+  }
 
     return (
         
@@ -24,6 +56,7 @@ const ManageInventories = () => {
                 
                     key={book.id}
                         book = {book}
+                        DeleteHendal={DeleteHendal}
                 
                 >
                         
