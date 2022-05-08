@@ -4,6 +4,7 @@ import Helmat from '../Helmat/Helmat';
 import ExtraSection from './ExtraSection';
 import HomeDisplay from './HomeDisplay';
 import Inventory from './Inventory';
+import SecondExtraSection from './SecondExtraSection/SecondExtraSection';
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <HomeDisplay></HomeDisplay>
             <Inventory> </Inventory>
             <ExtraSection></ExtraSection>
+            <SecondExtraSection/>
             <Footer></Footer>
         </div>
     );

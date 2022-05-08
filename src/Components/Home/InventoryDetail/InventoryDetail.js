@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
 import Helmat from '../../Helmat/Helmat';
+import UpdateQuanitiy from '../../UpdateQuantity/UpdateQuanitiy';
 import './InventoryDetail.css'
 
 const InventoryDetail = () => {
@@ -16,44 +16,15 @@ const InventoryDetail = () => {
       .then(data => setInventory(data))
   }, [])
 
+  // const hedalDeliver = 
+
  
 
-  const onSubmitNewItemUpdate = async (e) => {
-
-    toast("Add Successfully")
-
-    e.preventDefault()
-    const quantity = e.target.quantity.value;
-    console.log(quantity)
-    const inventory = {quantity}
-
-    e.target.reset()
   
-    
-
-
-    const url = `http://localhost:5000/inventory/${inventoryId}`
-
-
-    fetch(url, {
-        method: 'PUT', // or 'PUT'
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(inventory),
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
 
 
 
 
-}
 
 
 
@@ -80,19 +51,11 @@ const InventoryDetail = () => {
           <button type="button" className="btn btn-success">Deliver</button>
 
         </div>
-        <form onSubmit={onSubmitNewItemUpdate} className='w-50 mx-auto mt-5 mb-5'>
-
-        <div className="mb-3">
-                <label htmlFor="exampleInputQuantity" className="form-label">Book Quantity-Update</label>
-                <input type="Book-Quantity" name='quantity' className="form-control" id="exampleInputBookQuantity" aria-describedby="bookQuantityHelp" required />
-                <div id="bookQuantityHelp" className="form-text">please input book-Quantity update.</div>
-            </div>
-            <button type='submit' className='btn btn-success'>submit</button>
-            <ToastContainer/>
-            </form>
+       
            
             
       </div>
+      <UpdateQuanitiy/>
       
     </div>
 
